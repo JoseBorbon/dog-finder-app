@@ -1,0 +1,12 @@
+.Dog > img {
+  width: 75%;
+  border-radius: 50%;
+}
+
+.Dog-link {
+  text-decoration: none;
+}
+
+.Dog-link:hover {
+  text-decoration: underline;
+}
