@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { v4 as uuid } from 'uuid';
 
 class Nav extends Component {
   render() {
-    const dogs = this.props.dogs.map(({ name }) => {
+    const dogLinks = this.props.dogs.map(({ name }) => {
       return (
         <li className="nav-item" key={uuid()}>
-          <NavLink className="nav-link" exact to={`/${name}`}>
+          <NavLink exact to={`/${name}`} className="nav-link">
             {name}
           </NavLink>
         </li>
@@ -20,9 +20,9 @@ class Nav extends Component {
         style={{ backgroundColor: '#282A35' }}
       >
         <div className="container-fluid">
-          <NavLink className="navbar-brand" exact to="/">
+          <Link className="navbar-brand" to="/">
             Dog Shelter
-          </NavLink>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -37,11 +37,11 @@ class Nav extends Component {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <NavLink className="nav-link" exact to="/">
+                <NavLink exact to="/" className="nav-link">
                   Home
                 </NavLink>
               </li>
-              {dogs}
+              {dogLinks}
             </ul>
           </div>
         </div>
