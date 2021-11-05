@@ -17,11 +17,11 @@ export default class Routes extends Component {
       <Switch>
         <Route
           exact
-          path="/"
+          path="/dogs"
           render={() => <DogList dogs={this.props.dogs} />}
         />
-        <Route exact path="/:name" render={getDog} />
-        <Redirect exact to="/" />
+        <Route exact path="/dogs/:name" render={getDog} />
+        <Redirect exact to="/dogs" />
       </Switch>
     );
   }

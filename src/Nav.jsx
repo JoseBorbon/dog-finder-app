@@ -7,7 +7,7 @@ class Nav extends Component {
     const dogLinks = this.props.dogs.map(({ name }) => {
       return (
         <li className="nav-item" key={uuid()}>
-          <NavLink exact to={`/${name}`} className="nav-link">
+          <NavLink exact to={`/dogs/${name}`} className="nav-link">
             {name}
           </NavLink>
         </li>
@@ -20,7 +20,7 @@ class Nav extends Component {
         style={{ backgroundColor: '#282A35' }}
       >
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/">
+          <Link className="navbar-brand" to="/dogs">
             Dog Shelter
           </Link>
           <button
@@ -37,7 +37,7 @@ class Nav extends Component {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <NavLink exact to="/" className="nav-link">
+                <NavLink exact to="/dogs" className="nav-link">
                   Home
                 </NavLink>
               </li>

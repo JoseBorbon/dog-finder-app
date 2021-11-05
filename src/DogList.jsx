@@ -10,7 +10,7 @@ export default class DogList extends Component {
         <div className="Dog col-lg-4 text-center" key={uuid()}>
           <img src={src} alt={name} />
           <h3>
-            <Link className="Dog-link" exact to={`/${name}`}>
+            <Link className="Dog-link" exact to={`/dogs/${name}`}>
               {name}
             </Link>
           </h3>
