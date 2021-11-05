@@ -4,7 +4,7 @@ import { Link, Redirect } from 'react-router-dom';
 export default class DogDetails extends Component {
   render() {
     console.log(this.props.dog);
-    if (this.props.dog === undefined) return <Redirect exact to="/" />;
+    if (this.props.dog === undefined) return <Redirect exact to={`/dogs`} />;
     const { name, age, facts, src } = this.props.dog;
     const dogFacts = facts.map((fact) => (
       <li className="list-group-item">{fact}</li>
@@ -20,7 +20,7 @@ export default class DogDetails extends Component {
             </div>
             <ul className="list-group list-group-flush">{dogFacts}</ul>
             <div className="card-body">
-              <Link exact to="/" className="btn btn-primary">
+              <Link exact to="/dogs" className="btn btn-primary">
                 Go Back!
               </Link>
             </div>
